@@ -15,7 +15,7 @@ $ npm install active-win
 ## Usage
 
 ```js
-const activeWindow = require('active-win');
+const activeWindow = require("active-win");
 
 (async () => {
 	console.log(await activeWindow(options));
@@ -42,7 +42,6 @@ const activeWindow = require('active-win');
 })();
 ```
 
-
 ## API
 
 ### activeWindow(options?)
@@ -64,34 +63,29 @@ Enable the screen recording permission check. Setting this to `false` will preve
 
 Returns a `Promise<object>` with the result, or `Promise<undefined>` if there is no active window or if the information is not available.
 
-- `platform` *(string)* - `'macos'` | `'linux'` | `'windows'`
-- `title` *(string)* - Window title
-- `id` *(number)* - Window identifier
-- `bounds` *(Object)* - Window position and size
-	- `x` *(number)*
-	- `y` *(number)*
-	- `width` *(number)*
-	- `height` *(number)*
-- `owner` *(Object)* - App that owns the window
-	- `name` *(string)* - Name of the app
-	- `processId` *(number)* - Process identifier
-	- `bundleId` *(string)* - Bundle identifier *(macOS only)*
-	- `path` *(string)* - Path to the app
-- `url` *(string?)* - URL of the active browser tab if the active window is Safari (includes Technology Preview), Chrome (includes Beta, Dev, and Canary), Edge (includes Beta, Dev, and Canary), Brave (includes Beta and Nightly), Mighty, Ghost Browser, Wavebox, Sidekick, Opera (includes Beta and Developer), or Vivaldi *(macOS only)*
-- `memoryUsage` *(number)* - Memory usage by the window owner process
+- `platform` _(string)_ - `'macos'` | `'linux'` | `'windows'`
+- `title` _(string)_ - Window title
+- `id` _(number)_ - Window identifier
+- `bounds` _(Object)_ - Window position and size
+  - `x` _(number)_
+  - `y` _(number)_
+  - `width` _(number)_
+  - `height` _(number)_
+- `owner` _(Object)_ - App that owns the window
+  - `name` _(string)_ - Name of the app
+  - `processId` _(number)_ - Process identifier
+  - `bundleId` _(string)_ - Bundle identifier _(macOS only)_
+  - `path` _(string)_ - Path to the app
+- `url` _(string?)_ - URL of the active browser tab if the active window is Safari (includes Technology Preview), Chrome (includes Beta, Dev, and Canary), Edge (includes Beta, Dev, and Canary), Brave (includes Beta and Nightly), Mighty, Ghost Browser, Wavebox, Sidekick, Opera (includes Beta and Developer), or Vivaldi _(macOS only)_
+- `memoryUsage` _(number)_ - Memory usage by the window owner process
 
 ## OS support
 
 It works on macOS, Linux, and Windows 7+.
 
-**Note**: On Windows, there isn't a clear notion of a "Window ID". Instead it returns the memory address of the window "handle" in the `id` property. That "handle" is unique per window, so it can be used to identify them. [Read more…](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632597(v=vs.85).aspx#window_handle).
+**Note**: On Windows, there isn't a clear notion of a "Window ID". Instead it returns the memory address of the window "handle" in the `id` property. That "handle" is unique per window, so it can be used to identify them. [Read more…](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms632597(v=vs.85).aspx#window_handle>).
 
 ## Related
 
 - [active-win-cli](https://github.com/sindresorhus/active-win-cli) - CLI for this module
 - [active-win-log](https://github.com/uglow/active-win-log) - Window-usage logging CLI using this module
-
-## Maintainers
-
-- [Sindre Sorhus](https://github.com/sindresorhus)
-- [Sebastián Ramírez](https://github.com/tiangolo)
