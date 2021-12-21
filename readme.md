@@ -89,3 +89,9 @@ It works on macOS, Linux, and Windows 7+.
 
 - [active-win-cli](https://github.com/sindresorhus/active-win-cli) - CLI for this module
 - [active-win-log](https://github.com/uglow/active-win-log) - Window-usage logging CLI using this module
+
+## Use package from local files.
+
+1. Clone our active win to local
+2. cd to cloneed location && run yarn install and yarn build
+3. cd to your project && yarn add ~/work/active-win (your active win location)
